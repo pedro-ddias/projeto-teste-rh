@@ -21,7 +21,7 @@ public class DiretorTest {
         assertNotSame(diretor, diretor2);
     }
 
-    @Test
+    @Test //calcular o valor dee bonus que vai receber de acordo com a data de adimissão
     public void test_icalculaBonus() {
         //passar o salario base
         diretor.setSalario_base(10_000);
@@ -30,7 +30,7 @@ public class DiretorTest {
         assertEquals(4_000, diretor.icalculaBonus(), 000);
     }
 
-    @Test
+    @Test //calcular salario a partir do salario base e o bonus recebido de acordo com a data que entrou na empresa
     public void test_calculaSalario() {
         //passar o salario base
         diretor.setSalario_base(10_000);
