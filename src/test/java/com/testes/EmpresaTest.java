@@ -32,6 +32,7 @@ public class EmpresaTest {
     }
 
     @Test
+    // Verifica se o calculo do salário de todos gerente está correto, de acordo com os gerentes adicionados a sua respectiva lista e passado ao método
     public void test_calculaFolhaGerenteEDiretor(){
         this.gerente1.setSalario_base(3000);
         this.gerente1.setAdmissao(this.dataHoje);
@@ -43,6 +44,7 @@ public class EmpresaTest {
     }
 
     @Test
+    // Verifica se o calculo do salário de todos analista está correto, de acordo com os analistas adicionados a sua respectiva lista e passado ao método
     public void test_calculaFolhaAnalista(){
         this.junior1.setSalario(1_040); // salario real deve ser R$962,00
         this.junior1.setMesesTrab(1);
