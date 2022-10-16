@@ -6,7 +6,6 @@ public class Data {
 	private int dia;
 	private int mes;
 	private int ano;
-	private boolean bissexto;
 	private static Data maior;
 	
 	/**
@@ -23,7 +22,7 @@ public class Data {
 		this.dia = maior.dia;
 		this.mes = maior.mes;
 		this.ano = maior.ano;
-		this.bissexto = bissexto(this.ano);
+		bissexto(this.ano);
 		
 		maior = this.somarDias(1);
 	}
@@ -42,7 +41,7 @@ public class Data {
 			this.ano = 1900;
 		}
 		
-		this.bissexto = bissexto(ano);
+		bissexto(ano);
 		
 		if(mes >= 1 && mes <= 12) {
 			this.mes = mes;
@@ -76,7 +75,6 @@ public class Data {
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
-		this.bissexto = bissexto;
 	}
 	
 	/**
@@ -172,7 +170,7 @@ public class Data {
 			maior.dia = auxDia;
 			maior.mes = auxMes;
 			maior.ano = auxAno;
-			maior.bissexto = bissexto(auxAno);
+			bissexto(auxAno);
 		}
 		
 		return novaData;

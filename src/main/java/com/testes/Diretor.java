@@ -1,7 +1,5 @@
 package com.testes;
 
-import java.time.*;
-
 public class Diretor extends Funcionario implements I_PJ {
 
     private String cnpj;

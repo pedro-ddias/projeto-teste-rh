@@ -2,13 +2,11 @@ package com.testes;
 
 public class Analista extends Funcionario implements I_CLT {
 
-    private String cpf;
     private double salario;
     private int mesesTrab;
 
     public Analista(String nomeFuncionario, String cpfFuncionario) {
         super(nomeFuncionario);
-        this.cpf = cpfFuncionario;
     }
 
     @Override
