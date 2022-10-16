@@ -10,7 +10,6 @@ public class Diretor extends Funcionario implements I_PJ {
         this.cnpj = cnpjFuncionario;
     }
 
-
     @Override
     public double icalculaBonus() {
         Data dataHoje = new Data(this.admissao.retornaDiaAtual(), this.admissao.retornaMesAtual(), this.admissao.retornaAnoAtual());

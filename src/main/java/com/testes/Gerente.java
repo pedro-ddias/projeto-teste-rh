@@ -14,12 +14,17 @@ public class Gerente extends Funcionario implements I_PJ {
     public double icalculaBonus() {
         Data dataHoje = new Data(this.admissao.retornaDiaAtual(), this.admissao.retornaMesAtual(), this.admissao.retornaAnoAtual());
         int diferenca = this.admissao.diferencaMeses(dataHoje);
-
         if(this.admissao.getMes() == dataHoje.retornaMesAtual() && this.admissao.getAno() == dataHoje.retornaAnoAtual()){
             return 0.0;
         }
 
-        if (diferenca % 3 == 0 ) {
+        if (diferenca > 24) {
+            return this.salario_base * 0.4;
+        } if (diferenca > 18) {
+            return this.salario_base * 0.3;
+        } if (diferenca > 12) {
+            return this.salario_base * 0.2;
+        }if (diferenca > 6) {
             return this.salario_base * 0.1;
         } else {
             return 0.0;
