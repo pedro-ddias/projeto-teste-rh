@@ -248,6 +248,8 @@ public class Data {
 		int auxMes = this.mes;
 		int auxAno = this.ano;
 		int auxQuantMeses = 0;
+		System.out.println("dataAtual: "+ this.dia + "/" + this.mes + "/"+ this.ano);
+		System.out.println("outraData: "+outraData.diasEsseAno(outraData) +"/"+outraData.getMes()+"/"+outraData.getAno());
 		while(auxMes != outraData.mes || auxAno != outraData.ano){
 			auxMes++;
 			if(auxMes > 12){
@@ -256,6 +258,7 @@ public class Data {
 			}
 			auxQuantMeses++;
 		}
+		System.out.println("diferença: "+auxQuantMeses);
 		return auxQuantMeses;
 	}
 

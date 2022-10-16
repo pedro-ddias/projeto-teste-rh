@@ -11,17 +11,20 @@ public class DiretorTest {
     Diretor diretor = new Diretor("Daniel Trindade", "52044686515");
     Diretor diretor2 = new Diretor("Maycon Felipe", "42574856620");
 
-    @Test //se objeto não está retornando nulo
+    @Test 
+    //Verifica se objeto não está retornando nulo
     public void test_Diretor() {
         assertNotNull(diretor);
     }
 
-    @Test //se objeto não é o mesmo
+    @Test 
+    //Verifica se objeto não é o mesmo
     public void test_Diretor2() {
         assertNotSame(diretor, diretor2);
     }
 
-    @Test //calcular o valor dee bonus que vai receber de acordo com a data de adimissão
+    @Test 
+    //Verifica se o calculo do valor de bonus está correto de acordo com a data de adimissão
     public void test_icalculaBonus() {
         //passar o salario base
         diretor.setSalario_base(10_000);
@@ -30,7 +33,8 @@ public class DiretorTest {
         assertEquals(4_000, diretor.icalculaBonus(), 000);
     }
 
-    @Test //calcular salario a partir do salario base e o bonus recebido de acordo com a data que entrou na empresa
+    @Test 
+    //Verifica se o calculo do salario está correto a partir do salario base e o bonus recebido de acordo com a data que entrou na empresa
     public void test_calculaSalario() {
         //passar o salario base
         diretor.setSalario_base(10_000);

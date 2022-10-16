@@ -11,25 +11,28 @@ public class AnalistaTest {
     Analista analista = new Analista("Pedro Henrique", "13244246525");
     Analista analista2 = new Analista("Octavio Augusto", "22144263578");
 
-    @Test //se objeto não está retornando nulo
+    @Test 
+    //Verifica se objeto não está retornando nulo
     public void test_Analista() {
         assertNotNull(analista);
     }
 
-    @Test //se objeto não é o mesmo
+    @Test 
+    //Verifica se objeto não é o mesmo
     public void test_Analista2() {
         assertNotSame(analista, analista2);
     }
 
-    @Test //calcular salario final a partir do salário base adicionado e o imposto meramente calculado e testado
+    @Test 
+    //Verifica se o calculo salario final está correto a partir do salário base adicionado e o imposto meramente calculado e testado
     public void test_calculaSalario() {
         // passar o salario do analista
         analista.setSalario(1000);
         assertEquals(925, analista.calculaSalario(), 000);
     }
 
-    @Test //calcular se imposto esta correto de acordo com salario base do
-          //analista
+    @Test 
+    //Verifica se o calculo de imposto está correto de acordo com salario base do analista
     public void test_icalculaImposto() {
         //passar o salario do analista
         analista.setSalario(1000);
@@ -46,7 +49,8 @@ public class AnalistaTest {
         }
     }
 
-    @Test //calcular o decimo terceiro que sera recebido a partir do meses e salario com imposto meramente calculado e testado
+    @Test 
+    //Verifica se o calculo do decimo terceiro está correto, de acordo com o que sera recebido a partir do meses e salario com imposto meramente calculado e testado
     public void test_icalculaDecimoTerceiro() {
         //passar meses trabalhados
         analista.setMesesTrab(15);
@@ -55,7 +59,8 @@ public class AnalistaTest {
         assertEquals(1156.25, analista.icalculaDecimoTerceiro(), 000);
     }
 
-    @Test //calcular o valor recebido quando tirar ferias a partir do salario com imposto mais 1/3 do salario base
+    @Test 
+    //Verifica se o calculo do valor das férias está correto a partir do salario com imposto mais 1/3 do salario base
     public void test_icalculaFerias() {
         //passar o salário base
         analista.setSalario(1000);
