@@ -1,6 +1,4 @@
 package com.testes;
-import com.testes.Funcionario;
-import com.testes.Data;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
