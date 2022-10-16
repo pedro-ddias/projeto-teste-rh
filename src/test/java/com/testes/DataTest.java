@@ -1,5 +1,7 @@
 package com.testes;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -11,6 +13,18 @@ public class DataTest {
 
     Data data = new Data();
     Data dataAtual = new Data(dia, mes, anoBi);
+
+    @Test
+    //Verifica se objeto não está retornando nulo"
+    public void test_Data() {
+        assertNotNull(data);
+    }
+
+    @Test
+    //Verifica se objeto não é o mesmo
+    public void test_Data2() {
+        assertNotSame(data, dataAtual);
+    }
 
     @Test
     public void test_somarDias(){
@@ -35,7 +49,7 @@ public class DataTest {
     }
 
     @Test
-    public void test_recente(){
+    public void test_maisRecente(){
         assertTrue(this.dataAtual.maisRecente(this.data) == 1);
     }
 
@@ -43,6 +57,7 @@ public class DataTest {
     public void test_diferencaMeses(){
         assertTrue(this.data.diferencaMeses(this.dataAtual) == 1449);
     }
+
 
 
 

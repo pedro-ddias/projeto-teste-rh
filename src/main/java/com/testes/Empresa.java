@@ -20,7 +20,7 @@ public class Empresa {
     public double calculaFolhaGerente() {
 
         double somaSalarios = 0.0;
-        for (Gerente gerente : listaGerente) {
+        for (Gerente gerente : this.listaGerente) {
             somaSalarios += gerente.calculaSalario();
         }
         return somaSalarios;
@@ -32,7 +32,7 @@ public class Empresa {
      */
     public double calculaFolhaDiretor() {
         double somaSalarios = 0.0;
-        for (Diretor diretor : listaDiretor) {
+        for (Diretor diretor : this.listaDiretor) {
             somaSalarios += diretor.calculaSalario();
         }
         return somaSalarios;
@@ -45,7 +45,7 @@ public class Empresa {
     public double calculaFolhaAnalista() {
 
         double somaSalarios = 0.0;
-        for (Analista analista : listaAnalista) {
+        for (Analista analista : this.listaAnalista) {
             somaSalarios += analista.calculaSalario();
         }
         return somaSalarios;

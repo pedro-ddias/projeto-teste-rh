@@ -13,13 +13,13 @@ public class EmpresaTest {
 
     @Test 
     //Verifica se objeto não está retornando nulo
-    public void test_Analista() {
+    public void test_Empresa() {
         assertNotNull(empresa);
     }
 
     @Test 
     //Verifica se objeto não é o mesmo
-    public void test_Analista2() {
+    public void test_Empresa2() {
         assertNotSame(empresa, empresa2);
     }
 

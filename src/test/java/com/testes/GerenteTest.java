@@ -12,13 +12,13 @@ public class GerenteTest {
 
     @Test 
     //Verifica se objeto não está retornando nulo
-    public void test_Diretor() {
+    public void test_Gerente() {
         assertNotNull(gerente);
     }
 
     @Test 
     //Verifica se objeto não é o mesmo
-    public void test_Diretor2() {
+    public void test_Gerente2() {
         assertNotSame(gerente, gerente2);
     }
 

@@ -12,13 +12,13 @@ public class SeniorTest {
 
     @Test
     //Verifica se objeto não está retornando nulo"
-    public void test_Junior() {
+    public void test_Senior() {
         assertNotNull(senior);
     }
 
     @Test
     //Verifica se objeto não é o mesmo
-    public void test_Junior2() {
+    public void test_Senior2() {
         assertNotSame(senior, senior2);
     }
 }
